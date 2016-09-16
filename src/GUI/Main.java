@@ -129,7 +129,7 @@ public class Main {
 
 		lblDrapAnhDrop = new Label(shell, SWT.BORDER | SWT.WRAP | SWT.CENTER);
 		lblDrapAnhDrop.setBounds(10, 41, 243, 117);
-		lblDrapAnhDrop.setText("Kéo File Thả Vào Đây");
+		lblDrapAnhDrop.setText("Drag And Drop File Here");
 
 		txtResultListKeyWords = new Text(shell, SWT.BORDER | SWT.V_SCROLL
 				| SWT.MULTI);
@@ -140,24 +140,24 @@ public class Main {
 				.getFont("Segoe UI", 34, SWT.NORMAL));
 		lblResult.setForeground(SWTResourceManager.getColor(SWT.COLOR_RED));
 		lblResult.setBounds(259, 42, 301, 116);
-		lblResult.setText("Giá Tiền");
+		lblResult.setText("Total");
 		
 		rbExactly = new Button(shell, SWT.RADIO);
 		rbExactly.setSelection(true);
 		rbExactly.setBounds(46, 183, 90, 16);
-		rbExactly.setText("Chính Xác");
+		rbExactly.setText("Exactly");
 
 		rbExpand = new Button(shell, SWT.RADIO);
 		rbExpand.setBounds(142, 183, 90, 16);
-		rbExpand.setText("Mở Rộng");
+		rbExpand.setText("Expand");
 
 		rbNotExactly = new Button(shell, SWT.RADIO);
 		rbNotExactly.setBounds(229, 183, 121, 16);
-		rbNotExactly.setText("Không Khóa Chính");
+		rbNotExactly.setText("No Primary Keyword");
 		
 		btnCost = new Button(shell, SWT.NONE);
 		btnCost.setBounds(431, 164, 106, 50);
-		btnCost.setText("Tính Toán");
+		btnCost.setText("Do It!!!");
 
 	}
 }

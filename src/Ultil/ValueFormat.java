@@ -96,4 +96,5 @@ public class ValueFormat {
 		}
 		return sb.toString();
 	}
+
 }
