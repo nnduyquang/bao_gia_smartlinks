@@ -194,7 +194,7 @@ public class ExcelControl implements ExcelInterface {
                     if (kw.getTypeKey() == 1) {
                         lstKeyWord.add(kw);
                         textResultKeywords.append("--" + count
-                                + ".[Từ Khóa Chính] " + kw.getNameKey());
+                                + ".[Từ Khóa Chính] " + kw.getNameKey()+" --Bid Đề Nghị: "+kw.getSuggestedBid());
                         textResultKeywords.append("\n");
                     }
                     count++;
@@ -202,10 +202,10 @@ public class ExcelControl implements ExcelInterface {
                     lstKeyWord.add(kw);
                     if (kw.getTypeKey() == 1) {
                         textResultKeywords.append("--" + count
-                                + ".[Từ Khóa Chính] " + kw.getNameKey());
+                                + ".[Từ Khóa Chính] " + kw.getNameKey()+" --Bid Đề Nghị: "+kw.getSuggestedBid());
                     } else {
                         textResultKeywords.append("--" + count
-                                + ".[Từ Khóa Mở Rộng] " + kw.getNameKey());
+                                + ".[Từ Khóa Mở Rộng] " + kw.getNameKey()+" --Bid Đề Nghị: "+kw.getSuggestedBid());
                     }
                     textResultKeywords.append("\n");
                     count++;
@@ -213,7 +213,7 @@ public class ExcelControl implements ExcelInterface {
                     if (kw.getTypeKey() == 0) {
                         lstKeyWord.add(kw);
                         textResultKeywords.append("--" + count
-                                + ".[Từ Khóa Mở Rộng] " + kw.getNameKey());
+                                + ".[Từ Khóa Mở Rộng] " + kw.getNameKey()+" --Bid Đề Nghị: "+kw.getSuggestedBid());
                         textResultKeywords.append("\n");
                         count++;
                     } else {
@@ -409,7 +409,7 @@ public class ExcelControl implements ExcelInterface {
                     if (kw.getTypeKey() == 1) {
                         lstKeyWord.add(kw);
                         textResultKeywords.append("--" + count
-                                + ".[Từ Khóa Chính] " + kw.getNameKey());
+                                + ".[Từ Khóa Chính] " + kw.getNameKey()+"-- Tìm Kiếm Trung Bình: "+kw.getAvgMonthlySearches()+" --Độ Cạnh Tranh: "+kw.getRatioCompetition()+" --Bid Đề Nghị: "+ValueFormat.format(kw.getSuggestedBid(),ValueFormat.COMMAS));
                         textResultKeywords.append("\n");
                     }
                     count++;
@@ -417,10 +417,10 @@ public class ExcelControl implements ExcelInterface {
                     lstKeyWord.add(kw);
                     if (kw.getTypeKey() == 1) {
                         textResultKeywords.append("--" + count
-                                + ".[Từ Khóa Chính] " + kw.getNameKey());
+                                + ".[Từ Khóa Chính] " + kw.getNameKey()+"-- Tìm Kiếm Trung Bình: "+kw.getAvgMonthlySearches()+" --Độ Cạnh Tranh: "+kw.getRatioCompetition()+" --Bid Đề Nghị: "+ValueFormat.format(kw.getSuggestedBid(),ValueFormat.COMMAS));
                     } else {
                         textResultKeywords.append("--" + count
-                                + ".[Từ Khóa Mở Rộng] " + kw.getNameKey());
+                                + ".[Từ Khóa Mở Rộng] " + kw.getNameKey()+"-- Tìm Kiếm Trung Bình: "+kw.getAvgMonthlySearches()+" --Độ Cạnh Tranh: "+kw.getRatioCompetition()+" --Bid Đề Nghị: "+ValueFormat.format(kw.getSuggestedBid(),ValueFormat.COMMAS));
                     }
                     textResultKeywords.append("\n");
                     count++;
@@ -428,7 +428,7 @@ public class ExcelControl implements ExcelInterface {
                     if (kw.getTypeKey() == 0) {
                         lstKeyWord.add(kw);
                         textResultKeywords.append("--" + count
-                                + ".[Từ Khóa Mở Rộng] " + kw.getNameKey());
+                                + ".[Từ Khóa Mở Rộng] " + kw.getNameKey()+"-- Tìm Kiếm Trung Bình: "+kw.getAvgMonthlySearches()+" --Độ Cạnh Tranh: "+kw.getRatioCompetition()+" --Bid Đề Nghị: "+ValueFormat.format(kw.getSuggestedBid(),ValueFormat.COMMAS));
                         textResultKeywords.append("\n");
                         count++;
                     } else {

@@ -12,6 +12,7 @@ import org.eclipse.swt.widgets.Text;
 
 import GUI.Main;
 import Interface.ExcelInterface;
+import java.awt.Color;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.dnd.DnDConstants;
 import java.awt.dnd.DropTargetDropEvent;
@@ -20,6 +21,7 @@ import java.util.List;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import org.apache.commons.io.*;
 
 public class DragAndDrop {
 
@@ -46,7 +48,7 @@ public class DragAndDrop {
 
     }
 
-    public void doActionDragAndDrop(final JTextField tbPathFile, JLabel lblDrapAndDrop, final JLabel result, final JTextArea textResultKeywords, final int typeKeyWord) {
+    public void doActionDragAndDrop(final JTextField tbPathFile, JLabel lblDrapAndDrop, final JLabel result, final JTextArea textResultKeywords, final int typeKeyWord, final JLabel lblThongBao) {
         lblDrapAndDrop.setDropTarget(new java.awt.dnd.DropTarget() {
             @Override
             public synchronized void drop(DropTargetDropEvent evt) {
@@ -57,8 +59,19 @@ public class DragAndDrop {
                                     DataFlavor.javaFileListFlavor);
                     for (File file : droppedFiles) {
                         tbPathFile.setText(file.getAbsolutePath());
-                        ExcelControl ec = new ExcelControl();
-                        ec.executeSwing(file.getAbsolutePath(), result, textResultKeywords, typeKeyWord);
+                        for (int i = 0; i <= Constant.Constant.FILE_EXT.length; i++) {
+                            if (Constant.Constant.FILE_EXT[i].contains(FilenameUtils.getExtension(file.getAbsolutePath()))) {
+                                ExcelControl ec = new ExcelControl();
+                                ec.executeSwing(file.getAbsolutePath(), result, textResultKeywords, typeKeyWord);
+                                lblThongBao.setText("...");
+                                lblThongBao.setForeground(Color.BLACK);
+                                return;
+                            } else {
+                                lblThongBao.setText("File Khong Hop Le Nha !!!");
+                                lblThongBao.setForeground(Color.RED);
+                                return;
+                            }
+                        }
                     }
                 } catch (Exception ex) {
                     ex.printStackTrace();

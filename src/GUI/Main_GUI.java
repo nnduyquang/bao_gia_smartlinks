@@ -32,7 +32,7 @@ public class Main_GUI extends javax.swing.JFrame {
             chon_option = Constant.NOTEXPAND;
         }
         DragAndDrop dad = new DragAndDrop();
-        dad.doActionDragAndDrop(tbPathFile, lblDrapAndDrop, lblResult, txtResultListKeyWords, chon_option);
+        dad.doActionDragAndDrop(tbPathFile, lblDrapAndDrop, lblResult, txtResultListKeyWords, chon_option,lblThongBao);
     }
 
     /**
@@ -55,6 +55,7 @@ public class Main_GUI extends javax.swing.JFrame {
         rbExactly = new javax.swing.JRadioButton();
         rbExpand = new javax.swing.JRadioButton();
         rbNotExactly = new javax.swing.JRadioButton();
+        lblThongBao = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SMARTLINKS.VN");
@@ -97,6 +98,8 @@ public class Main_GUI extends javax.swing.JFrame {
         buttonGroup1.add(rbNotExactly);
         rbNotExactly.setText("No Primary Keyword");
 
+        lblThongBao.setText("...");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -121,7 +124,10 @@ public class Main_GUI extends javax.swing.JFrame {
                         .addGap(26, 26, 26)
                         .addComponent(rbNotExactly)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnCost, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnCost, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblThongBao)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -142,8 +148,10 @@ public class Main_GUI extends javax.swing.JFrame {
                     .addComponent(rbExpand)
                     .addComponent(rbExactly))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblThongBao)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -159,7 +167,7 @@ public class Main_GUI extends javax.swing.JFrame {
         } else {
             chon_option = Constant.NOTEXPAND;
         }
-        mc.Xu_Ly_Button_Cost(tbPathFile.getText(), lblResult, txtResultListKeyWords, chon_option);
+        mc.Xu_Ly_Button_Cost(tbPathFile.getText(), lblResult, txtResultListKeyWords, chon_option,lblThongBao);
     }//GEN-LAST:event_btnCostActionPerformed
 
     private void btnClickMeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClickMeActionPerformed
@@ -211,6 +219,7 @@ public class Main_GUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblDrapAndDrop;
     private javax.swing.JLabel lblResult;
+    private javax.swing.JLabel lblThongBao;
     private javax.swing.JRadioButton rbExactly;
     private javax.swing.JRadioButton rbExpand;
     private javax.swing.JRadioButton rbNotExactly;
