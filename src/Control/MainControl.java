@@ -28,7 +28,7 @@ public class MainControl {
                 lblThongBao.setForeground(Color.BLACK);
                 return;
             } else {
-                lblThongBao.setText("File Khong Hop Le Nha !!!");
+                lblThongBao.setText("File Khong Hop Le Nha,Chi Lay CSV Thoi Nha Nha !!!");
                 lblThongBao.setForeground(Color.RED);
                 return;
             }

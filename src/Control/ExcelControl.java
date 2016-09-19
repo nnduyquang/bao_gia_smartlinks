@@ -376,7 +376,7 @@ public class ExcelControl implements ExcelInterface {
                 if (i == 0) {
                     kw.setRatio(kw.getAvgDaySearch() / 15);
                 } else if (kw.getAvgDaySearch() > 199) {
-                    Double d = kw.getAvgDaySearch() * 0.3;
+                    Double d = kw.getAvgDaySearch() * 0.03;
                     kw.setRatio(d.intValue());
                 } else if (kw.getAvgDaySearch() > 149
                         && kw.getAvgDaySearch() <= 199) {
